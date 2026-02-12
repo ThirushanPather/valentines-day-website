@@ -7,13 +7,23 @@ import MemoryScreen from './components/MemoryScreen';
 import PuzzleRoom from './components/PuzzleRoom';
 import FinalScreen from './components/FinalScreen';
 
+const PUBLIC_URL = process.env.PUBLIC_URL;
+
 const musicTracks = {
-  welcome: 'audio/welcome.mp3',
-  investigation: 'audio/investigation.mp3',
-  puzzle: 'audio/puzzle.mp3',
-  final: 'audio/final.mp3',
-  memory: 'audio/memory.mp3',
+  welcome: `${PUBLIC_URL}/audio/welcome.mp3`,
+  investigation: `${PUBLIC_URL}/audio/investigation.mp3`,
+  puzzle: `${PUBLIC_URL}/audio/puzzle.mp3`,
+  final: `${PUBLIC_URL}/audio/final.mp3`,
+  memory: `${PUBLIC_URL}/audio/memory.mp3`,
 };
+
+// const musicTracks = {
+//   welcome: 'audio/welcome.mp3',
+//   investigation: 'audio/investigation.mp3',
+//   puzzle: 'audio/puzzle.mp3',
+//   final: 'audio/final.mp3',
+//   memory: 'audio/memory.mp3',
+// };
 
 // CUSTOMIZE YOUR MEMORY DATA HERE
 const memoryData = {
