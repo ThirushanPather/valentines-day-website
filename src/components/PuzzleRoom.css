@@ -1,0 +1,256 @@
+.puzzle-room {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1000px !important;
+}
+
+.puzzle-title {
+  margin-bottom: 0px;
+}
+
+.puzzle-instructions {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* --- WORKSPACE LAYOUT --- */
+.puzzle-workspace {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* --- THE GRID CONTAINER (LEFT) --- */
+.puzzle-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); 
+  grid-auto-rows: 100px;
+  gap: 0px; 
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  border: 3px dashed var(--soft-pink);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: visible; /* Essential so scaled pieces can "bleed" out */
+  flex-shrink: 0;
+}
+
+.puzzle-grid-slot {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(233, 30, 99, 0.05); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.puzzle-grid-slot.empty:hover {
+  background: rgba(233, 30, 99, 0.1);
+  border-color: var(--primary-pink);
+}
+
+.puzzle-grid-slot.filled {
+  border: none;
+  background: transparent;
+  z-index: 5; /* Base Z-Index */
+}
+
+/* Ensure placed images fit the slot by default */
+.placed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transform-origin: center center;
+}
+
+.slot-number {
+  font-size: 20px;
+  color: rgba(233, 30, 99, 0.2);
+  font-weight: 700;
+  user-select: none;
+}
+
+/* --- RIGHT PANEL (Pieces OR Translation) --- */
+.right-panel-area {
+  flex-grow: 1;
+  max-width: 380px;
+}
+
+/* --- AVAILABLE PIECES AREA --- */
+.available-pieces-area {
+  width: 100%;
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+  height: 460px; 
+  overflow-y: auto;
+}
+
+.pieces-label {
+  text-align: center;
+  color: var(--deep-rose);
+  margin-bottom: 15px;
+  font-size: 16px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-pink);
+}
+
+.pieces-scroll-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.puzzle-piece-draggable {
+  width: 80px; 
+  height: 80px;
+  object-fit: contain;
+  cursor: grab;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.puzzle-piece-draggable:active {
+  cursor: grabbing;
+}
+
+/* --- TRANSLATION SECTION --- */
+.translation-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(252, 228, 236, 0.9));
+  padding: 30px 20px;
+  border-radius: 25px;
+  border: 3px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.translation-section h3 {
+  font-size: 24px;
+  color: var(--deep-rose);
+  margin: 0;
+}
+
+.translation-prompt {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.translation-input {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid var(--soft-pink);
+}
+
+.submit-translation-btn {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 12px;
+}
+
+/* --- SUCCESS OVERLAY --- */
+.puzzle-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  z-index: 100;
+}
+
+.puzzle-success-overlay h1 {
+  font-size: 50px;
+  color: var(--primary-pink);
+  text-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+  animation: pulse 1.5s infinite;
+}
+
+/* --- MANUAL PIECE ADJUSTMENTS --- */
+/* Tweak these values to make your puzzle fit perfectly! */
+
+/* ROW 1 */
+.placed-image.piece-1 { transform: translate(20px, 37px) scale(1.17); }
+.placed-image.piece-2 { transform: translate(0px, 30px) scale(1.0); }
+.placed-image.piece-3 { transform: translate(-20px, 37px) scale(1.17); }
+
+/* ROW 2 */
+.placed-image.piece-4 { transform: translate(14px, 15px) scale(1.0); }
+.placed-image.piece-5 { transform: translate(0px, 0px) scale(1.2); }
+.placed-image.piece-6 { transform: translate(-8px, 15px) scale(1.1); }
+
+/* ROW 3 */
+.placed-image.piece-7 { transform: translate(28px, -19px) scale(1.1); }
+.placed-image.piece-8 { transform: translate(0px, -20px) scale(1.05); }
+.placed-image.piece-9 { transform: translate(-26px, -20px) scale(1.07); }
+
+/* ROW 4 */
+.placed-image.piece-10 { transform: translate(20px, -60px) scale(1.0); }
+.placed-image.piece-11 { transform: translate(0px, -50px) scale(1.1); }
+.placed-image.piece-12 { transform: translate(-20px, -55px) scale(1.00); }
+
+
+/* --- RESPONSIVE (Mobile) --- */
+@media (max-width: 950px) {
+  .puzzle-workspace {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .right-panel-area {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .available-pieces-area {
+    height: auto;
+    min-height: 200px;
+    max-height: 300px; 
+    overflow-y: visible;
+  }
+  
+  .puzzle-grid-container {
+    grid-template-columns: repeat(3, 80px);
+    grid-auto-rows: 80px;
+    gap: 0px;
+  }
+  
+  .puzzle-piece-draggable {
+    width: 60px;
+    height: 60px;
+  }
+}

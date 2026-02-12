@@ -1,0 +1,413 @@
+/* ============================================
+   FINAL SCREEN - CLEAN AND MODERN
+   ============================================ */
+
+.final-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   MAIN PANEL - LARGER SIZE
+   ============================================ */
+
+.final-panel {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  min-height: 600px;
+  
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  
+  /* MODERN GLOW EFFECT */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(233, 30, 99, 0.1),
+    0 0 30px rgba(233, 30, 99, 0.2),
+    0 0 60px rgba(255, 64, 129, 0.15);
+    
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   QUESTION TEXT
+   ============================================ */
+
+.final-question {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #d81b60;
+  margin: 0 0 30px 0;
+  text-align: center;
+  line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ============================================
+   SWEET MESSAGE
+   ============================================ */
+
+.sweet-message {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   FUNNY MESSAGE AREA
+   ============================================ */
+
+.message-container {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.funny-text {
+  font-size: 1.2rem;
+  color: #e91e63;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.buttons-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 80px;
+}
+
+.btn-final {
+  padding: 18px 52px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* YES BUTTON */
+.btn-yes {
+  background: linear-gradient(135deg, #e91e63, #d81b60);
+  color: white;
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);
+  z-index: 10;
+  position: relative;
+}
+
+.btn-yes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(233, 30, 99, 0.4);
+}
+
+.btn-yes:active {
+  transform: translateY(0);
+}
+
+/* NO BUTTON - SMOOTH MOVEMENT */
+.btn-no {
+  background: white;
+  color: #d81b60;
+  border: 2px solid #f8bbd0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10000 !important;
+}
+
+.btn-no:hover {
+  border-color: #f48fb1 !important;
+}
+
+/* Smooth transition when button starts moving */
+.btn-no.moving {
+  transition: left 0.3s ease, top 0.3s ease;
+}
+
+/* ============================================
+   SUCCESS SCREEN
+   ============================================ */
+
+.success-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 240, 245, 0.98), rgba(252, 228, 236, 0.98));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.success-card {
+  text-align: center;
+  max-width: 700px;
+  padding: 60px 40px;
+  position: relative;
+  z-index: 201;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  box-shadow: 
+    0 20px 60px rgba(233, 30, 99, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 30px;
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.1);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+}
+
+.success-card h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #d81b60;
+  margin-bottom: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.success-card p {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   LOTTIE ANIMATIONS POSITIONED AROUND SCREEN
+   ============================================ */
+
+.lottie-animations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.lottie-item {
+  position: absolute;
+}
+
+.lottie-top-left {
+  top: 5%;
+  left: 5%;
+}
+
+.lottie-top-right {
+  top: 5%;
+  right: 5%;
+}
+
+.lottie-bottom-left {
+  bottom: 5%;
+  left: 8%;
+}
+
+.lottie-bottom-right {
+  bottom: 5%;
+  right: 8%;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .final-screen {
+    padding: 30px 20px;
+  }
+
+  .final-panel {
+    padding: 40px 30px;
+    min-height: 550px;
+  }
+
+  .final-question {
+    font-size: 2.25rem;
+  }
+
+  .sweet-message {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .btn-final {
+    padding: 16px 40px;
+    font-size: 1.05rem;
+  }
+  
+  .buttons-row {
+    gap: 20px;
+  }
+  
+  .success-card {
+    padding: 40px 30px;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .success-card h1 {
+    font-size: 2.75rem;
+  }
+  
+  .success-card p {
+    font-size: 1.5rem;
+  }
+
+  .lottie-top-left dotlottie-wc,
+  .lottie-top-right dotlottie-wc {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .lottie-center dotlottie-wc {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .lottie-bottom-left dotlottie-wc,
+  .lottie-bottom-right dotlottie-wc {
+    width: 130px !important;
+    height: 130px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-panel {
+    padding: 30px 24px;
+    min-height: 500px;
+  }
+
+  .final-question {
+    font-size: 1.875rem;
+  }
+
+  .sweet-message {
+    font-size: 0.95rem;
+  }
+
+  .btn-final {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+  
+  .funny-text {
+    font-size: 1rem;
+  }
+  
+  .success-card {
+    padding: 30px 20px;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+
+  .success-card h1 {
+    font-size: 2.25rem;
+  }
+  
+  .success-card p {
+    font-size: 1.25rem;
+  }
+
+  .lottie-top-left dotlottie-wc,
+  .lottie-top-right dotlottie-wc {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .lottie-center dotlottie-wc {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .lottie-bottom-left dotlottie-wc,
+  .lottie-bottom-right dotlottie-wc {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .lottie-top-left {
+    top: 3%;
+    left: 3%;
+  }
+
+  .lottie-top-right {
+    top: 3%;
+    right: 3%;
+  }
+
+  .lottie-bottom-left {
+    bottom: 3%;
+    left: 3%;
+  }
+
+  .lottie-bottom-right {
+    bottom: 3%;
+    right: 3%;
+  }
+}

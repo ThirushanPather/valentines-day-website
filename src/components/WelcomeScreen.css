@@ -1,0 +1,78 @@
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-title {
+  font-size: 56px;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.welcome-subtitle {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  color: var(--deep-rose);
+}
+
+.welcome-message {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 700px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.start-button {
+  font-size: 20px;
+  padding: 18px 50px;
+  letter-spacing: 0.5px;
+}
+
+/* Lottie Decorations */
+.lottie-decoration {
+  position: absolute;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.lottie-left {
+  top: 20px;
+  left: 20px;
+}
+
+.lottie-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 36px;
+  }
+
+  .welcome-subtitle {
+    font-size: 24px;
+  }
+
+  .welcome-message {
+    font-size: 16px;
+  }
+
+  .lottie-decoration {
+    display: none;
+  }
+
+  .start-button {
+    font-size: 18px;
+    padding: 16px 40px;
+  }
+}

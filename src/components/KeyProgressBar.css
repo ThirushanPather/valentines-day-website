@@ -1,0 +1,89 @@
+.key-progress-bar {
+  background: linear-gradient(135deg, rgba(255, 182, 217, 0.3), rgba(218, 112, 214, 0.3));
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+.progress-title {
+  text-align: center;
+  color: var(--deep-rose);
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.keys-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.key-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
+  transition: all 0.3s ease;
+}
+
+.key-item.unlocked {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.key-item.locked {
+  opacity: 0.5;
+}
+
+.key-icon {
+  font-size: 32px;
+  display: block;
+}
+
+.key-icon-locked {
+  font-size: 32px;
+  display: block;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.key-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.key-item.unlocked .key-label {
+  color: #d97706;
+}
+
+@media (max-width: 768px) {
+  .keys-container {
+    gap: 10px;
+  }
+
+  .key-item {
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .key-icon,
+  .key-icon-locked {
+    font-size: 24px;
+  }
+
+  .key-label {
+    font-size: 10px;
+  }
+}

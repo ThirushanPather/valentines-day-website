@@ -1,0 +1,223 @@
+:root {
+  /* Refined Classy Pink Palette */
+  --primary-pink: #E91E63;
+  --soft-pink: #F8BBD0;
+  --light-pink: #FCE4EC;
+  --deep-rose: #C2185B;
+  --accent-pink: #FF4081;
+  --gold: #D4AF37;
+  --purple: #BA68C8;
+  --light-purple: #F3E5F5;
+  --white: #ffffff;
+  --cream: #FFF9F5;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --shadow: rgba(233, 30, 99, 0.25);
+  --glow: rgba(233, 30, 99, 0.5);
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FCE4EC 0%, #F3E5F5 50%, #E1BEE7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove emoji backgrounds */
+.App::before,
+.App::after {
+  display: none;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+
+/* Screen Container */
+.screen-container {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 600px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 
+    0 8px 32px 0 rgba(233, 30, 99, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px 0 rgba(233, 30, 99, 0.15),
+      0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+      0 0 20px rgba(233, 30, 99, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 8px 32px 0 rgba(233, 30, 99, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+      0 0 40px rgba(233, 30, 99, 0.5);
+  }
+}
+
+/* Common Button Styles */
+.btn {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-pink), var(--deep-rose));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.35);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--purple), var(--primary-pink));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-yes {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: white;
+  font-size: 24px;
+  padding: 20px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-yes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.btn-no {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  font-size: 24px;
+  padding: 20px 60px;
+  position: absolute;
+  transition: all 0.15s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Input Styles */
+.input-field {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid var(--soft-pink);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+/* Text Styles */
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--deep-rose), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: var(--primary-pink);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
