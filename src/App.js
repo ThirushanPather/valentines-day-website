@@ -361,6 +361,7 @@ function App() {
           memoryData={memoryData[currentMemory]}
           onComplete={handleMemoryComplete}
           onBack={handleBackToInvestigation}
+          baseUrl={BASE_URL}  // <--- ADD THIS LINE
         />
       )}
 

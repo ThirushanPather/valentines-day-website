@@ -3,7 +3,8 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import './MemoryScreen.css';
 
-const MemoryScreen = ({ memoryId, memoryData, onComplete, onBack }) => {
+// CHANGE 1: Added baseUrl to props here
+const MemoryScreen = ({ memoryId, memoryData, onComplete, onBack, baseUrl }) => {
   const [answeredQuestions, setAnsweredQuestions] = useState({});
   const [currentAnswers, setCurrentAnswers] = useState({});
   const [showHints, setShowHints] = useState({});
@@ -110,6 +111,8 @@ const MemoryScreen = ({ memoryId, memoryData, onComplete, onBack }) => {
               image={image}
               folder={memoryData.folder}
               isUnlocked={unlocked}
+              // CHANGE 2: Pass baseUrl down to the child component
+              baseUrl={baseUrl} 
               question={question}
               currentAnswer={currentAnswers[question?.id]}
               onAnswerChange={(value) => 
@@ -147,6 +150,8 @@ const ParallaxSection = ({
   image, 
   folder, 
   isUnlocked, 
+  // CHANGE 3: Accept baseUrl here
+  baseUrl,
   question,
   currentAnswer,
   onAnswerChange,
@@ -173,7 +178,8 @@ const ParallaxSection = ({
   const y = useTransform(smoothY, [0, 1], [150, -150]);
   const opacity = useTransform(smoothY, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   
-  const imagePath = `/images/${folder}/${image.file}`;
+  // CHANGE 4: Use baseUrl to construct the correct path for GitHub Pages
+  const imagePath = `${baseUrl}/images/${folder}/${image.file}`;
 
   return (
     <motion.div
