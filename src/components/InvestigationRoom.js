@@ -22,27 +22,27 @@ const InvestigationRoom = ({ unlockedKeys, onMemoryClick, onProceedToPuzzle, all
   const memorySpots = [
     { 
       id: 'memory1', 
-      label: 'Ballito Mmeories', 
+      label: 'Ballito Lifestyle Memories', 
       lottieSrc: 'https://lottie.host/241e86f8-2688-4f13-a38b-71da74b2b68e/eS4EgULEjA.lottie'
     },
     { 
       id: 'memory2', 
-      label: 'Love Letters', 
+      label: 'Valentine Memories', 
       lottieSrc: 'https://lottie.host/012d816a-6f81-4a23-95c1-0d52c526e702/bzc6jkh5BK.lottie'
     },
     { 
       id: 'memory3', 
-      label: 'Music Box', 
+      label: 'Ballito Adventures', 
       lottieSrc: 'https://lottie.host/93f5e7f4-a4e7-4cc5-9b89-bd5f0ae36992/9AGZFabHWu.lottie'
     },
     { 
       id: 'memory4', 
-      label: 'Heart Locket', 
+      label: 'A Swinging Time', 
       lottieSrc: 'https://lottie.host/e127b169-466a-4f18-983c-a5c9e3eb8aae/m3QsO5muWg.lottie'
     },
     { 
       id: 'memory5', 
-      label: 'Memories Box', 
+      label: 'Pretoria Visits', 
       lottieSrc: 'https://lottie.host/6ff33ed6-d563-434f-9ec4-dd2152ee433f/LbnvQUmita.lottie'
     }
   ];
