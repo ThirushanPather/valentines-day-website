@@ -7,14 +7,14 @@ import MemoryScreen from './components/MemoryScreen';
 import PuzzleRoom from './components/PuzzleRoom';
 import FinalScreen from './components/FinalScreen';
 
-const PUBLIC_URL = process.env.PUBLIC_URL;
+const BASE_URL = '/valentines-day-website';
 
 const musicTracks = {
-  welcome: `${PUBLIC_URL}/audio/welcome.mp3`,
-  investigation: `${PUBLIC_URL}/audio/investigation.mp3`,
-  puzzle: `${PUBLIC_URL}/audio/puzzle.mp3`,
-  final: `${PUBLIC_URL}/audio/final.mp3`,
-  memory: `${PUBLIC_URL}/audio/memory.mp3`,
+  welcome: `${BASE_URL}/audio/welcome.mp3`,
+  investigation: `${BASE_URL}/audio/investigation.mp3`,
+  puzzle: `${BASE_URL}/audio/puzzle.mp3`,
+  final: `${BASE_URL}/audio/final.mp3`,
+  memory: `${BASE_URL}/audio/memory.mp3`,
 };
 
 // const musicTracks = {
