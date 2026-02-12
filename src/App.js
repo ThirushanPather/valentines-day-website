@@ -8,11 +8,11 @@ import PuzzleRoom from './components/PuzzleRoom';
 import FinalScreen from './components/FinalScreen';
 
 const musicTracks = {
-  welcome: '/audio/welcome.mp3',
-  investigation: '/audio/investigation.mp3',
-  puzzle: '/audio/puzzle.mp3',
-  final: '/audio/final.mp3',
-  memory: '/audio/memory.mp3',
+  welcome: 'audio/welcome.mp3',
+  investigation: 'audio/investigation.mp3',
+  puzzle: 'audio/puzzle.mp3',
+  final: 'audio/final.mp3',
+  memory: 'audio/memory.mp3',
 };
 
 // CUSTOMIZE YOUR MEMORY DATA HERE
