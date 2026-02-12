@@ -7,23 +7,23 @@ import './InvestigationRoom.css';
 const MEMORY_MESSAGES = {
   memory1: {
     title: "Why Ballito Matters 🌊",
-    content: "This trip was the first time I realized how much I truly loved spending every second with you. From the pottery painting to the soi 55 dinners, it wasn't just about the activities, but about how easy and natural life felt by your side. You make every moment feel like a vacation."
+    content: "Ballito is where a lot of our relationships memories lives. It holds a really special place in my heart because it is so intertwined with the thought of you. Pottery painting was such a special day for me. Your creativity and artistic side is a side of you I really love. It takes me back to the picnic where I asked you to be my girlfriend and where this whole journey started. We've also gotten to share so many amazing meals together at lifestyle and I can't wait to continue tasting new foods with you for the rest of our life."
   },
   memory2: {
-    title: "Our Valentine's Day ❤️",
-    content: "Taking you to Wood and Fire was such a highlight for me. I remember being so nervous hoping everything would be perfect. Seeing you smile that night made all the planning worth it. You looked absolutely stunning, and I wanted that night to last forever."
+    title: "Our Valentine's Date ❤️",
+    content: "Booking the place at Menlyn Maine and taking you to Wood and Fire was such a highlight for me. I remember being so nervous hoping everything would be perfect. Seeing you smile that night made all the planning worth it. You looked absolutely stunning, and I wished that weekend lasted forever. From playing it takes two together, watching some romance movies, sharing societea, trying my best to find you san Pellegrino and to dancing in the lounge to 'Just the two of us', are all moments that I will treasure for the rest of my life because I got to share them with the person I love the most in this world."
   },
   memory3: {
     title: "Adventures & Firsts 🎾",
-    content: "That first game of Padel (and our only TikTok!) is a core memory for me. Even when we are just being silly or trying something new, we always end up laughing. It reminds me that no matter what we do, as long as we do it together, it's going to be my favorite thing."
+    content: "Watching the live action Lilo and Stitch was a moment where the rest of the world faded away and we got to just enjoy being kids again and I couldn't imagine enjoying that feeling with anyone else. The stress of final project was taken away by waking up to your beautiful face in the morning and going for a therapeutic litchi eating session on the beach! Guess I can attribute my final year project success to you then! Making that funny little padel TikTok video is something that I will always treasure. I was so anti TikTok videos but I really enjoyed that with you so much. Not to forget that delicious famous bunny we got after. Definitely had some of the best bunny chows with you and I look forward to many more this year with the love of my life. It reminds me that no matter what we do, as long as we do it together, it's going to be my favorite thing."
   },
   memory4: {
-    title: "Durban July & Golf ⛳",
-    content: "I know I dragged you into golf, but watching you try (and arguably have a better swing than me) was the best. That brunch at Fig Tree Farm afterwards felt so peaceful. It’s these quiet, happy mornings with you that I look forward to the most."
+    title: "Acitivity Dates ⛳",
+    content: "Taking a drive up to come see you in your home location was super fun. Fig tree farm with you was definitely one of my highlights from last year. I'm so glad you pushed me to try the driving range and even though we were so nervous about looking like fools, luckily we went to the side of the driving range where everyone seemed to be pretty bad. I had the best time with you there and I look forward to more driving range sessions and activity dates with the most beautiful doctor in the whole world."
   },
   memory5: {
     title: "Growing Together 🎨",
-    content: "Looking back at our 1.5 year anniversary and all the small milestones, I'm just so proud of us. Every month with you feels like a gift. Painting, eating, traveling—it's all building this beautiful life that I wouldn't trade for anything in the world."
+    content: "Looking back at our 1.5 year anniversary and all the small milestones, I'm just so proud of us. Every month with you feels like a gift. I really wanted to do something nice for our relationship. I know that I don't get to do as much for you now as I would like, but I am so committed to ensuring that we have an amazing life together and that I give you everything you want in life. And I know that with your support, there is nothing in this world that I won't be able to achieve for us. I love you so much."
   }
 };
 
