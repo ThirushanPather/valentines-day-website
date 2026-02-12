@@ -98,8 +98,7 @@ const FinalScreen = () => {
               </h1>
 
               <p className="sweet-message">
-                I hope you enjoyed this trip down memory lane. I put a lot of effort into this for you 
-                and I really hope you enjoyed it. So please select the correct option.
+                I hope you enjoyed this trip down memory lane. I put alot of effort into this to make it as special as possible for you. You mean the world to me. There is nobody else I can imagine a future with other than you. We may have our ups and downs but I would choose healing and growing with you a million times over than anything else. I hope that convinced you to select the correct option below!
               </p>
 
               <div className="message-container">

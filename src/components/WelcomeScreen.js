@@ -49,7 +49,7 @@ const WelcomeScreen = ({ onStart, onTestPuzzle }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        Dear Bianca
+        To my bubby
       </motion.h2>
 
       <motion.p
@@ -60,12 +60,13 @@ const WelcomeScreen = ({ onStart, onTestPuzzle }) => {
       >
         These two years with you have been the most magical journey of my life.
         <br />
-        Every moment, every memory, every laugh - they all mean the world to me.
+        Every moment, every memory, every laugh - they all mean the world to me. You are the most beautiful person in the entire world and I can't wait to continue making these amazing memories with you for the rest of our life. 
         <br />
         <br />
         I've created a special escape room filled with our precious memories.
         <br />
-        Solve the puzzles to unlock a very important question...
+        Solve the puzzles to unlock a very important question... 
+        Click continue for a quick trip down memory lane
       </motion.p>
 
       <motion.button

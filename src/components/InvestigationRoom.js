@@ -22,7 +22,7 @@ const InvestigationRoom = ({ unlockedKeys, onMemoryClick, onProceedToPuzzle, all
   const memorySpots = [
     { 
       id: 'memory1', 
-      label: 'Photo Album', 
+      label: 'Ballito Mmeories', 
       lottieSrc: 'https://lottie.host/241e86f8-2688-4f13-a38b-71da74b2b68e/eS4EgULEjA.lottie'
     },
     { 
