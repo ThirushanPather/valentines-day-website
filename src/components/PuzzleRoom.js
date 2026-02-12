@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import './PuzzleRoom.css';
 
-const PuzzleRoom = ({ onComplete }) => {
+const PuzzleRoom = ({ onComplete, baseUrl }) => {
   const totalPieces = 12;
   const [pieces, setPieces] = useState([]);
   const [placedPieces, setPlacedPieces] = useState(Array(totalPieces).fill(null));
@@ -17,11 +17,12 @@ const PuzzleRoom = ({ onComplete }) => {
   useEffect(() => {
     const initialPieces = Array.from({ length: totalPieces }, (_, i) => ({
       id: i + 1,
-      src: `/images/puzzle/Picture${i + 1}-removebg-preview.png`
+      // FIX: Use baseUrl here so GitHub finds the images
+      src: `${baseUrl}/images/puzzle/Picture${i + 1}-removebg-preview.png`
     }));
     
     setPieces(initialPieces.sort(() => Math.random() - 0.5));
-  }, []);
+  }, [baseUrl]); // Add baseUrl to dependency array
 
   useEffect(() => {
     if (placedPieces.every(p => p !== null) && !isPuzzleComplete) {

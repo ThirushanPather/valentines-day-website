@@ -366,7 +366,10 @@ function App() {
       )}
 
       {currentScreen === 'puzzle' && (
-        <PuzzleRoom onComplete={handlePuzzleComplete} />
+        <PuzzleRoom 
+          onComplete={handlePuzzleComplete} 
+          baseUrl={BASE_URL} // <--- Add this line
+        />
       )}
 
       {currentScreen === 'final' && (
